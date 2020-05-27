@@ -27,6 +27,7 @@ find_package(urdfdom_headers REQUIRED)
 
 find_package(ASSIMP REQUIRED)
 include_directories(${ASSIMP_INCLUDE_DIRS})
+link_directories(${ASSIMP_LIBRARY_DIRS})
 
 # OGRE doesn't come with correctly installed cmake files.
 # We need both, OGRE and OGRE-Overlay. Look for both simulatenously and use prefix X_
