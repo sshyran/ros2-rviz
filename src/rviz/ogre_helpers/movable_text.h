@@ -47,7 +47,6 @@
 #include <OgreVector3.h>
 #include <OgreQuaternion.h>
 #include <OgreSharedPtr.h>
-#include <rviz/ogre_helpers/version_check.h>
 
 
 namespace Ogre
@@ -204,7 +203,7 @@ protected:
     return mAABB;
   }
 
-#if OGRE_VERSION >= OGRE_VERSION_CHECK(1,10,4)
+#if (OGRE_VERSION_MAJOR >= 1 && OGRE_VERSION_MINOR >= 10 && OGRE_VERSION_PATCH >= 4)
   const Ogre::String& getName() const
 #else
   const Ogre::String& getName() const override	  const Ogre::String& getName() const override
