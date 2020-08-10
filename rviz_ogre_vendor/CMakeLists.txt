@@ -199,18 +199,18 @@ macro(build_ogre)
 endmacro()
 
 if(BUILDING_FREETYPE_LOCALLY)
-  build_freetype()
+  #build_freetype()
 endif()
 if(BUILDING_ZLIB_LOCALLY)
-  build_zlib()
+  #build_zlib()
 endif()
 
-build_ogre()
+#build_ogre()
 
 if(WIN32)
-  ament_environment_hooks(env_hook/rviz_ogre_vendor_library_path.bat)
-  set(ENV_VAR_NAME "PATH")
-  set(ENV_VAR_VALUE "opt\\rviz_ogre_vendor\\bin")
+  #ament_environment_hooks(env_hook/rviz_ogre_vendor_library_path.bat)
+  #set(ENV_VAR_NAME "PATH")
+  #set(ENV_VAR_VALUE "opt\\rviz_ogre_vendor\\bin")
 else()
   ament_environment_hooks(env_hook/rviz_ogre_vendor_library_path.sh)
   if(APPLE)
@@ -220,7 +220,7 @@ else()
   endif()
   set(ENV_VAR_VALUE "opt/rviz_ogre_vendor/lib")
 endif()
-ament_environment_hooks(env_hook/rviz_ogre_vendor_library_path.dsv.in)
+#ament_environment_hooks(env_hook/rviz_ogre_vendor_library_path.dsv.in)
 
 ament_package(
   CONFIG_EXTRAS "rviz_ogre_vendor-extras.cmake.in"
