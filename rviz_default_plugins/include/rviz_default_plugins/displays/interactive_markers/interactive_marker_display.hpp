@@ -62,7 +62,7 @@ namespace displays
 class MarkerBase;
 
 /// Displays Interactive Markers
-class InteractiveMarkerDisplay : public rviz_common::Display
+class RVIZ_DEFAULT_PLUGINS_PUBLIC InteractiveMarkerDisplay : public rviz_common::Display
 {
   Q_OBJECT
 
